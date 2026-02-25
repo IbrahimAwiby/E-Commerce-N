@@ -69,6 +69,7 @@ export default function Home() {
                   className="w-full h-full"
                   resizeMode="cover"
                 />
+                <View className="absolute inset-0 bg-black/40" />
                 <View className="absolute bottom-4 left-4 z-10">
                   <Text className="text-white text-2xl font-bold">
                     {banner.title}
@@ -82,7 +83,6 @@ export default function Home() {
                     </Text>
                   </TouchableOpacity>
                 </View>
-                <View className="absolute inset-0 bg-black/40" />
               </View>
             ))}
           </ScrollView>
@@ -111,7 +111,7 @@ export default function Home() {
                 onPress={() =>
                   router.push({
                     pathname: "/shop",
-                    params: { category: cat.id === "all" ? "" : cat.name },
+                    params: { category: cat.name === "all" ? "" : cat.name },
                   })
                 }
               />
