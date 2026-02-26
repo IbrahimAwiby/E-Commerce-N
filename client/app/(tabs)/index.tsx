@@ -132,7 +132,7 @@ export default function Home() {
             <ActivityIndicator size="large" />
           ) : (
             <View className="flex-row flex-wrap justify-between">
-              {products.slice(0, 6).map((product) => (
+              {products.slice(0, 8).map((product) => (
                 <ProductCard key={product._id} product={product} />
               ))}
             </View>
